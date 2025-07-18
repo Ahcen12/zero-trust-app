@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Zero Trust App</title>
-  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+  <meta charset="UTF-8" />
+  <title>🔐 Zero Trust Uygulaması</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 40px;
       text-align: center;
     }
-    input {
-      padding: 8px;
-      margin: 5px;
+
+    h2 {
+      font-size: 28px;
     }
+
     button {
       padding: 10px 20px;
-      margin-top: 10px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h2>🔐 Zero Trust Uygulaması</h2>
 
+  <h2>🔐 <b>Zero Trust Uygulaması</b></h2>
+
+  <!-- Login Bölümü -->
   <div id="authSection">
-    <button onclick="login()">Giriş Yap</button>
+    <button id="loginBtn">Giriş Yap</button>
   </div>
 
+  <!-- Ana İçerik -->
   <div id="mainContent" style="display: none;">
     <h3 id="welcomeText"></h3>
-    <textarea id="note" rows="5" cols="40" placeholder="Notunuzu yazın..."></textarea><br>
-    <button onclick="saveNote()">Kaydet</button><br><br>
-    <button onclick="logout()">Çıkış Yap</button>
+    <button id="logoutBtn">Çıkış Yap</button>
   </div>
 
+  <!-- App.js -->
   <script type="module" src="app.js"></script>
 </body>
 </html>
