@@ -21,23 +21,24 @@
       cursor: pointer;
     }
   </style>
+
+  <!-- ✅ Auth0 UMD versiyonu -->
+  <script src="https://cdn.auth0.com/js/auth0/9.19/auth0.min.js"></script>
 </head>
 <body>
 
   <h2>🔐 <b>Zero Trust Uygulaması</b></h2>
 
-  <!-- Login Bölümü -->
   <div id="authSection">
-    <button id="loginBtn">Giriş Yap</button>
+    <button onclick="login()">Giriş Yap</button>
   </div>
 
-  <!-- Ana İçerik -->
   <div id="mainContent" style="display: none;">
     <h3 id="welcomeText"></h3>
-    <button id="logoutBtn">Çıkış Yap</button>
+    <button onclick="logout()">Çıkış Yap</button>
   </div>
 
-  <!-- App.js -->
-  <script type="module" src="app.js"></script>
+  <!-- UMD ile yazılmış app.js -->
+  <script src="app.js"></script>
 </body>
 </html>
